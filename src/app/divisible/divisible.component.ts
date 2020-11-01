@@ -7,19 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DivisibleComponent implements OnInit {
 
-  listNumber:number[];
-  rangeNumber:number = (1000 - 1000) + -1000;
+  nombreElement: number = 5;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  generateNumber(): void {
+  genererNombres(): void {
+
     let listeNombres = [];
 
-    for (let i = 0; i < 5; i++) {
-      listeNombres.push(Math.random() * this.rangeNumber);
+    for (let i = 0; i < this.nombreElement; i++) {
+      listeNombres.push(Math.floor(Math.random() * 2000) - 1000);
     }
 
     console.log(listeNombres);
