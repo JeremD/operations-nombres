@@ -1,37 +1,11 @@
-<h2>Division</h2>
+<h2>Divisible par 3 ou 5</h2>
 
 <button (click)="genererNombres()">Générer nombres</button>
-
-<p>{{listeNombres}}</p>
 
 <div *ngFor="let nombre of listeNombres">
   <p>{{nombre}}</p>
   <ul>
-    <li *ngIf="nombre % 3 == 0">
-      Geste
-    </li>
-    <li *ngIf="nombre % 3 == 5">
-      Forme
-    </li>
-    <li *ngIf="nombre % 3 == 0 && nombre % 5 == 0; then Gestform">
-      Gestform
+    <li>
+      {{nombreDivisible(nombre)}}
     </li>
   </ul>
-
-
-  <ng-template #divisible3>
-    <div>Geste</div>
-  </ng-template>
-
-  <ng-template #divisible5>
-    <div>Forme</div>
-  </ng-template>
-
-  <ng-template #Gestform>
-    <div>Gestform</div>
-  </ng-template>
-
-  <ng-template #nondivisible>
-    <div>{{nombre}}</div>
-  </ng-template>
-</div>

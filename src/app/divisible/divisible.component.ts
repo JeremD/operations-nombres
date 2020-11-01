@@ -1,5 +1,4 @@
-import { NumberSymbol } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-divisible',
@@ -10,6 +9,7 @@ export class DivisibleComponent implements OnInit {
 
   nombresElement = 5;
   listeNombres: number[] = [];
+
 
   constructor() { }
 
@@ -27,6 +27,20 @@ export class DivisibleComponent implements OnInit {
   //   while (Numbers.length) {
   //     Numbers.pop();
   //   }
-  // }
+
+  nombreDivisible(nombre: number): any {
+    if (nombre % 3 === 0 && nombre % 5 === 0) {
+      return 'Gestform';
+    }
+    else if (nombre % 3 === 0) {
+      return 'Geste';
+    }
+    else if (nombre % 5 === 0) {
+      return 'Forme';
+    }
+    else {
+      return nombre;
+    }
+  }
 
 }
