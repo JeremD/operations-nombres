@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { NumberSymbol } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-divisible',
@@ -7,23 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DivisibleComponent implements OnInit {
 
-  nombreElement: number = 5;
+  nombresElement = 5;
+  listeNombres: number[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  genererNombres(): void {
+  genererNombres(): any {
 
-    let listeNombres = [];
-
-    for (let i = 0; i < this.nombreElement; i++) {
-      listeNombres.push(Math.floor(Math.random() * 2000) - 1000);
+    for (let i = 0; i < this.nombresElement; i++) {
+      this.listeNombres.push(Math.floor(Math.random() * 2000) - 1000);
     }
-
-    console.log(listeNombres);
-
   }
+
+  // effacerNombres(Numbers: number[]): any {
+  //   while (Numbers.length) {
+  //     Numbers.pop();
+  //   }
+  // }
 
 }
