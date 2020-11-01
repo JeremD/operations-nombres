@@ -3,9 +3,9 @@
 <button (click)="genererNombres()">Générer nombres</button>
 
 <div *ngFor="let nombre of listeNombres">
-  <p>{{nombre}}</p>
+  <p [ngStyle]="{'color': 'orange'}">{{nombre}}</p>
   <ul>
     <li>
-      {{nombreDivisible(nombre)}}
+      {{diviserNombre(nombre)}}
     </li>
   </ul>

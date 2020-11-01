@@ -7,38 +7,61 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DivisibleComponent implements OnInit {
 
-  nombresElement = 5;
+  listSize = 5;
   listeNombres: number[] = [];
-
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  /**
+   * Générer des nombres entre -1000 et 1000
+   *
+   * @returns {*}
+   * @memberof DivisibleComponent
+   */
   genererNombres(): any {
-
-    for (let i = 0; i < this.nombresElement; i++) {
+    for (let i = 0; i < this.listSize; i++) {
       this.listeNombres.push(Math.floor(Math.random() * 2000) - 1000);
     }
   }
 
-  // effacerNombres(Numbers: number[]): any {
-  //   while (Numbers.length) {
-  //     Numbers.pop();
-  //   }
+  /**
+   * Rafraichir la liste une fois les nombres générés
+   *
+   * @param {number[]} arrayNumbers
+   * @returns {*}
+   * @memberof DivisibleComponent
+   */
+  viderListe(arrayNumbers: number[]): any {
+    while (arrayNumbers.length) {
+      arrayNumbers.pop();
+    }
+  }
 
-  nombreDivisible(nombre: number): any {
+  /**
+   * Vérifier si nombre divisable par 3, 5 ou les deux
+   *
+   * @param {number} nombre
+   * @returns {*}
+   * @memberof DivisibleComponent
+   */
+  diviserNombre(nombre: number): any {
     if (nombre % 3 === 0 && nombre % 5 === 0) {
+      this.viderListe(this.listeNombres);
       return 'Gestform';
     }
     else if (nombre % 3 === 0) {
+      this.viderListe(this.listeNombres);
       return 'Geste';
     }
     else if (nombre % 5 === 0) {
+      this.viderListe(this.listeNombres);
       return 'Forme';
     }
     else {
+      this.viderListe(this.listeNombres);
       return nombre;
     }
   }
