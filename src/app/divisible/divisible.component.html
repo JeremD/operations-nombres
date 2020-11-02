@@ -1,11 +1,10 @@
-<h2>Divisible par 3 ou 5</h2>
+<h2>Nombres divisibles par 3, par 5 ou les deux</h2>
 
-<button (click)="genererNombres()">Générer nombres</button>
+<button mat-flat-button color="primary" (click)="genererNombres()">Générer
+  nombres</button>
 
-<div *ngFor="let nombre of listeNombres">
-  <p [ngStyle]="{'color': 'orange'}">{{nombre}}</p>
-  <ul>
-    <li>
-      {{diviserNombre(nombre)}}
-    </li>
-  </ul>
+<mat-card *ngFor="let nombre of listeNombres">
+  <mat-card-title [ngStyle]="{'color': 'orange'}"> {{diviserNombre(nombre)}}
+  </mat-card-title>
+  <mat-card-content>{{nombre}}</mat-card-content>
+</mat-card>
