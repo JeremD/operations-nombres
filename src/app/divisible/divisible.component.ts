@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faDivide } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-divisible',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DivisibleComponent implements OnInit {
 
+  faDivide = faDivide;
   listSize = 5;
   listeNombres: number[] = [];
 
