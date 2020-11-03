@@ -43,7 +43,7 @@ export class DivisibleComponent implements OnInit {
   }
 
   /**
-   * Vérifier si nombre divisable par 3, 5 ou les deux
+   * Vérifier si nombre divisible par 3, 5 ou les deux
    *
    * @param {number} nombre
    * @returns {*}

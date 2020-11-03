@@ -23,4 +23,8 @@ npm install
 npm start
 ```
 
-## 3. Ouvrir le navigateur web à l'adresse http://localhost:4200/
+## 3. Ouvrir le navigateur web à l'adresse suivante
+
+```
+http://localhost:4200/
+```
