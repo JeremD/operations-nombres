@@ -33,7 +33,7 @@ export class DivisibleComponent implements OnInit {
    * Rafraichir la liste une fois les nombres générés
    *
    * @param {number[]} arrayNumbers
-   * @returns {*}
+   * @returns {empty array}
    * @memberof DivisibleComponent
    */
   viderListe(arrayNumbers: number[]): any {
