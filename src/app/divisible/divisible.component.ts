@@ -46,7 +46,7 @@ export class DivisibleComponent implements OnInit {
    * Vérifier si nombre divisible par 3, 5 ou les deux
    *
    * @param {number} nombre
-   * @returns {*}
+   * @returns {string}
    * @memberof DivisibleComponent
    */
   diviserNombre(nombre: number): any {
