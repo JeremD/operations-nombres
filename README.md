@@ -1,6 +1,6 @@
 # Operations Nombres
 
-Soit une liste aléatoire de nombres entiers, compris entre -1000 et 1000. Pour chaque nombre n de liste, on veut effectuer les opérations suivantes:
+Soit une liste aléatoire de nombres entiers, compris entre -1000 et 1000. Pour chaque nombre n de liste, on veut effectuer les opérations suivantes :
 
 • si le nombre est divisible par 3 : on affiche Geste
 
