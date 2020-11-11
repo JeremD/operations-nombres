@@ -5,11 +5,13 @@
 
   <div class="inputMultiplication">
     <mat-form-field appearance="standard">
-      <input matInput type="number" placeholder="Nombre 1" #firstNumber>
+      <input matInput type="text" placeholder="Nombre 1" [formControl]="nombre1Requis" #firstNumber>
+      <mat-error *ngIf="nombre1Requis.invalid">{{getErrorMessage(nombre1Requis)}}</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="standard">
-      <input matInput type="text" placeholder="Nombre 2"  #secondNumber>
+      <input matInput type="text" placeholder="Nombre 2" [formControl]="nombre2Requis" #secondNumber>
+      <mat-error *ngIf="nombre2Requis.invalid">{{getErrorMessage(nombre2Requis)}}</mat-error>
     </mat-form-field>
   </div>
 

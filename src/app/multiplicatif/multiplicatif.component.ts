@@ -12,7 +12,8 @@ export class MultiplicatifComponent implements OnInit {
   faTimes = faTimes;
   resultatMultiplication: number;
 
-  // nombreRequis = new FormControl ('', [Validators.number]);
+  nombre1Requis = new FormControl('', [Validators.pattern('^[0-9]*$')]);
+  nombre2Requis = new FormControl('', [Validators.pattern('^[0-9]*$')]);
 
   constructor() { }
 
@@ -29,6 +30,10 @@ export class MultiplicatifComponent implements OnInit {
    */
   multiplierNombres(nombre1: number, nombre2: number): number {
     return this.resultatMultiplication = nombre1 * nombre2;
+  }
+
+  getErrorMessage(inputError: FormControl) {
+    return inputError.hasError('pattern') ? 'Nombre invalide' : '';
   }
 
 }

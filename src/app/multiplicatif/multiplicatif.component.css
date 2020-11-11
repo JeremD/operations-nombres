@@ -9,6 +9,10 @@
   flex-direction: column;
 }
 
+.inputMultiplication>* {
+  width: 100%;
+}
+
 #resultat {
   text-align: center;
   color: purple;
