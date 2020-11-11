@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -10,6 +11,8 @@ export class MultiplicatifComponent implements OnInit {
 
   faTimes = faTimes;
   resultatMultiplication: number;
+
+  // nombreRequis = new FormControl ('', [Validators.number]);
 
   constructor() { }
 
