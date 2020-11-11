@@ -1,1 +1,13 @@
-<p>multiplicatif works!</p>
+<div class="multiplication">
+  <h1>
+    <fa-icon [icon]="faTimes"></fa-icon> Multiplication
+  </h1>
+
+  <button mat-flat-button color="primary" onclick="this.blur()"
+    (click)="multiplierNombres(5, 2)">Multiplier nombres
+  </button>
+
+  <mat-card>
+    <mat-card-content>{{resultatMultiplication}}</mat-card-content>
+  </mat-card>
+</div>

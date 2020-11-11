@@ -9,8 +9,9 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class MultiplicatifComponent implements OnInit {
 
   faTimes = faTimes;
-  number1: number;
-  number2: number;
+  nombre1: number;
+  nombre2: number;
+  resultatMultiplication: number;
 
   constructor() { }
 
@@ -26,7 +27,7 @@ export class MultiplicatifComponent implements OnInit {
    * @memberof MultiplicatifComponent
    */
   multiplierNombres(a: number, b: number): number {
-    return a * b;
+    return this.resultatMultiplication = a * b;
   }
 
 }
