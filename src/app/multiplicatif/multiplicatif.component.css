@@ -3,3 +3,14 @@
   max-width: 700px;
   margin: auto;
 }
+
+.inputMultiplication {
+  display: flex;
+  flex-direction: column;
+}
+
+#resultat {
+  text-align: center;
+  color: purple;
+  font-size: large;
+}

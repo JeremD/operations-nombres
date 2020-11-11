@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,8 +9,6 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class MultiplicatifComponent implements OnInit {
 
   faTimes = faTimes;
-  nombre1: number;
-  nombre2: number;
   resultatMultiplication: number;
 
   constructor() { }
@@ -21,13 +19,13 @@ export class MultiplicatifComponent implements OnInit {
   /**
    * Multiplier deux nombres
    *
-   * @param {number} a
-   * @param {number} b
+   * @param {number} nombre1
+   * @param {number} nombre2
    * @returns {number}
    * @memberof MultiplicatifComponent
    */
-  multiplierNombres(a: number, b: number): number {
-    return this.resultatMultiplication = a * b;
+  multiplierNombres(nombre1: number, nombre2: number): number {
+    return this.resultatMultiplication = nombre1 * nombre2;
   }
 
 }

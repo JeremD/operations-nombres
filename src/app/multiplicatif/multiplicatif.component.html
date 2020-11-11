@@ -3,11 +3,21 @@
     <fa-icon [icon]="faTimes"></fa-icon> Multiplication
   </h1>
 
-  <button mat-flat-button color="primary" onclick="this.blur()"
-    (click)="multiplierNombres(5, 2)">Multiplier nombres
+  <div class="inputMultiplication">
+    <mat-form-field appearance="standard">
+      <input matInput type="text" placeholder="Nombre 1" #firstNumber>
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <input matInput type="text" placeholder="Nombre 2"  #secondNumber>
+    </mat-form-field>
+  </div>
+
+  <button mat-flat-button color="primary"
+    (click)="multiplierNombres(firstNumber.value, secondNumber.value)">Multiplier nombres
   </button>
 
   <mat-card>
-    <mat-card-content>{{resultatMultiplication}}</mat-card-content>
+    <mat-card-content id="resultat">{{resultatMultiplication}}</mat-card-content>
   </mat-card>
 </div>
