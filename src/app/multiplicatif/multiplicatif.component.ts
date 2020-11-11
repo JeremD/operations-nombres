@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,7 +32,14 @@ export class MultiplicatifComponent implements OnInit {
     return this.resultatMultiplication = nombre1 * nombre2;
   }
 
-  getErrorMessage(inputError: FormControl) {
+  /**
+   * Message d'input invalid
+   *
+   * @param {FormControl} inputError
+   * @returns {string}
+   * @memberof MultiplicatifComponent
+   */
+  getErrorMessage(inputError: FormControl): string {
     return inputError.hasError('pattern') ? 'Nombre invalide' : '';
   }
 
