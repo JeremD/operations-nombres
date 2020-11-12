@@ -1,0 +1,25 @@
+.multiplication {
+  background-color: white;
+  margin: auto;
+  text-align: center;
+}
+
+.inputMultiplication {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+}
+
+.inputMultiplication>* {
+  width: 100%;
+}
+
+button {
+  margin-top: 20px;
+}
+
+#resultat {
+  text-align: center;
+  color: purple;
+  font-size: large;
+}
