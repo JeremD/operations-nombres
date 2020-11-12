@@ -33,13 +33,13 @@ export class MultiplicatifComponent implements OnInit {
   }
 
   /**
-   * Message d'input invalid
+   * Message input invalide
    *
    * @param {FormControl} inputError
    * @returns {string}
    * @memberof MultiplicatifComponent
    */
-  getErrorMessage(inputError: FormControl): string {
+  messageNombreInvalide(inputError: FormControl): string {
     return inputError.hasError('pattern') ? 'Nombre invalide' : '';
   }
 
