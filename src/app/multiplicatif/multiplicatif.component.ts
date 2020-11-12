@@ -12,8 +12,8 @@ export class MultiplicatifComponent implements OnInit {
   faTimes = faTimes;
   resultatMultiplication: number;
 
-  nombre1Requis = new FormControl('', [Validators.pattern('^[0-9]*$')]);
-  nombre2Requis = new FormControl('', [Validators.pattern('^[0-9]*$')]);
+  nombre1Requis = new FormControl('', [Validators.pattern('[+-]?([0-9]*[.])?[0-9]+')]);
+  nombre2Requis = new FormControl('', [Validators.pattern('[+-]?([0-9]*[.])?[0-9]+')]);
 
   constructor() { }
 
