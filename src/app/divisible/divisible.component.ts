@@ -9,7 +9,7 @@ import { faDivide } from '@fortawesome/free-solid-svg-icons';
 export class DivisibleComponent implements OnInit {
 
   faDivide = faDivide;
-  listSize = 6;
+  listSize = 5;
   listeNombres: number[] = [];
 
   constructor() { }
